@@ -138,7 +138,7 @@ test_generator = helpers.TestGeneratorFolder(
 # loading all the models at each cycles
 models = helpers.load_all_models(
     N_CYCLES,
-    backbone = 'efficientnetb7'
+    model_name = 'efficientnetb7'
 )
 
 ## TTA
