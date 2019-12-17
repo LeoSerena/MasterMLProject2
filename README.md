@@ -1,9 +1,10 @@
-# MasterMLProject2
-road segmentation
+# MasterMLProject2 : road segmentation
+
+This project was part of a challenge from EPFL course : Machine Learning CS-433 and was hosted on the platform [AIcrowd](https://www.aicrowd.com/).
 
 Installation
 ------------
-To install the dependencies first install anaconda and pip on your computer
+To install the dependencies first install [anaconda](https://www.anaconda.com/distribution/) and be sure to have pip on your computer
 
 Create a new environment with the conda console and activate it:
 
