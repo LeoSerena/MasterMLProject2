@@ -161,7 +161,7 @@ def run(num_model = 1):
 
     TEST_SIZE = len(test_generator)
     # directory where the predictions are generated
-    prediction_dir = "test_pred/"
+    prediction_dir = "test_pred{}/".format(num_model)
     # directory for image to predict
     test_dir = 'test_set_images/test_'
 
@@ -191,7 +191,7 @@ def run(num_model = 1):
         helpers.masks_to_submission(submission_filename, *image_filenames)
     else:
         """
-        this is when he file is called from the run.py
+        this is called when the file is called from the run.py
         """
         submission_filename = "pred_model_{}.csv".format(num_model)
         image_filenames = []

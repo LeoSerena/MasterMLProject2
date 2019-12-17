@@ -299,7 +299,7 @@ class TestGeneratorFolder(Sequence):
         X_sample = self.read_image(self.image_filenames[index])
         return X_sample.reshape(1, X_sample.shape[0], X_sample.shape[1], 3).astype(np.float32)
 
-foreground_threshold = 0.25 # percentage of pixels > 1 required to assign a foreground label to a patch
+foreground_threshold = 0.28 # percentage of pixels > 1 required to assign a foreground label to a patch
 
 # assign a label to a patch
 def patch_to_label(patch):
