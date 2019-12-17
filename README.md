@@ -19,7 +19,7 @@ Then run on the conda console:
 ```
 $ conda install scikit-image numpy scipy matplotlib tensorflow keras
 
-$ pip install sklearn albumentations segmentations_models tta_wrapper
+$ pip install sklearn albumentations segmentation_models tta_wrapper
 
 $ easy_install pillow
 ```
