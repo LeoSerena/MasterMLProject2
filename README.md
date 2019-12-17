@@ -38,9 +38,33 @@ to download the dataset.
 
 Transfer the *training* and *test_set_images* folders into the same folder as the script.py
 
+Then go to the [additionnal dataset link](https://www.cs.toronto.edu/~vmnih/data/) and download the training set
+
+Then, create a new folder in the same folder as the run.py file and name it *training_augmented*. In the folder, deposit the basic training and masks images in two folders named *images* and *groundtruth* and put the newly downloaded data as well.
+
+Your tree should look like this:
+
+```
+.
++-- run.py
++-- script.py
++-- helpers.py
++-- README.md
++-- training
+|    |   images
+|    |    |    *base satellite images
+|    |   groundtruth
+|    |    |    *base masks
++-- training_augmented
+|    |   images
+|    |    |    *base satellite images and additionnal dataset images
+|    |   groundtruth
+|    |    |    *base masks and additionnal dataset masks
+```
+
 Then run:
 ```
-$ python script.py
+$ python run.py
 ```
 
 Ressources
