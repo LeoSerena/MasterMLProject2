@@ -9,7 +9,7 @@ To install the dependencies first install [anaconda](https://www.anaconda.com/di
 Create a new environment with the conda console and activate it:
 
 ```
-$ conda create *my environment name*
+$ conda create --name *my environment name*
 
 $ conda activate *my environment name*
 ```
