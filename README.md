@@ -17,7 +17,7 @@ $ conda activate *my environment name*
 Then run on the conda console:
 
 ```
-$ conda install sckit-image numpy scipy matplotlib tensorflow keras
+$ conda install scikit-image numpy scipy matplotlib tensorflow keras
 
 $ pip install sklearn albumentations segmentations_models tta_wrapper
 
