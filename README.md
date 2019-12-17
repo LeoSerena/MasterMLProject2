@@ -1,6 +1,15 @@
 # MasterMLProject2 : road segmentation
 
+Description
+-----------
 This project was part of a challenge from EPFL course : Machine Learning CS-433 and was hosted on the platform [AIcrowd](https://www.aicrowd.com/).
+
+Content
+-------
+The folder contains the folowing files:
+ - a script.py file containing the code doing the results
+ - a helpers.py file containing the code of the helper functions for script.py
+ - 
 
 Installation
 ------------
