@@ -1,3 +1,0 @@
-conda install sckit-image numpy scipy matplotlib tensorflow keras
-easy_install pillow
-pip install sklearn albumentations segmentations_models tta_wrapper
