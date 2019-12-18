@@ -1,7 +1,7 @@
-# MasterMLProject2 : road segmentation
+﻿# MasterMLProject2 : road segmentation
 ### TEAM : dabbing_squidwards
 ### TEAM MEMBERS : 
-- Nicolas Brandt
+- Nicolas Brandt 274215 nicolas.brandt-dit-grieurin@epfl.ch
 - Leo Marco Serena 263565 leo.serena@epfl.ch
 - Rodrigo Granja 241757 rodrigo.soaresgranja@epfl.ch
 
@@ -74,17 +74,20 @@ $ python run.py
 
 Ressources
 ----------
-Part of the code was inspired by this [github repository](https://github.com/Diyago/ML-DL-scripts/blob/master/DEEP%20LEARNING/segmentation/Segmentation%20pipeline/segmentation%20pipeline.ipynb) from *Инсаф Ашрапов*, especially the DataGenerator, the Albumentations package usage and the model choice.
+Part of the code was inspired by this [github repository](https://github.com/Diyago/ML-DL-scripts/blob/master/DEEP%20LEARNING/segmentation/Segmentation%20pipeline/segmentation%20pipeline.ipynb) from *Инсаф Ашрапов*, especially the DataGenerator and the Albumentations package usage.
+For cyclical learning rates, we used the implementation from https://machinelearningmastery.com/snapshot-ensemble-deep-learning-neural-network/.
 
 Summary
 -------
-The Objective of this project was to detect Roads given a dataset of satellite images with their groundtruth. 
-Since it implies images processing, we used a CNN(Convolutionnal Neural Network) to implement our task, as it is the state-of-the-art method for this kind of problems.
+The aim of this project is to detect roads on a dataset of satellite images. The competition metric is the f1 score, and we achieve a score of 0.922, which is tied for first place as of this writing.
+We use a U-net, a segmentation specific neural network (implementation from from the [Segmentation_models](https://github.com/qubvel/segmentation_models) package and improved our results with various techniques, including: 
 
-We used the Unet model from the [Segmentation_models](https://github.com/qubvel/segmentation_models) package and improved it with various techniques, including: 
-
+ - Selecting the backbone
+ - Selecting the loss function
+ - Selecting appropriate optimizer and tuning the learning rate
+ - Cyclical learning rates and snapshot ensembles
  - Data augmentation
- - Dynamical learning rate
- - Model combinations
- - TTA(Test Time Augmentation)
+ - Test Time Augmentation
+ - External data
+ - Model ensembling
  
