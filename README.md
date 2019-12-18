@@ -1,6 +1,6 @@
 # MasterMLProject2 : road segmentation
-## TEAM : dabbing_squidwards
-## MEMBERS : Nicolas Brandt Dit-Gueurin Leo Marco Serena 
+### TEAM : dabbing_squidwards
+### TEAM MEMBERS : Nicolas Brandt, Leo Marco Serena, Rodrigo Granja
 
 Description
 -----------
