@@ -1,47 +1,25 @@
-import gzip
 import os
-import sys
-import urllib
-import matplotlib.image as mpimg
-import matplotlib.pyplot as plt
 from PIL import Image
-import numpy as np
-import time
-import random
 import keras
-import code
 import tensorflow.python.platform
 import tensorflow as tf
 
-from keras.utils import Sequence
-from skimage.io import imread
 from sklearn.utils import shuffle
 
-import re
 import pandas as pd
-import albumentations as albu
-from albumentations import Resize
 
-from albumentations import (Blur, Compose, HorizontalFlip, HueSaturationValue,
-                            IAAEmboss, IAASharpen, JpegCompression, OneOf,
-                            RandomBrightness, RandomBrightnessContrast,
+from albumentations import (Blur, Compose, HorizontalFlip, OneOf,
                             RandomContrast, RandomCrop, RandomGamma,
-                            RandomRotate90, RGBShift, ShiftScaleRotate,
-                            Transpose, VerticalFlip, ElasticTransform, GridDistortion, OpticalDistortion)
+                            ShiftScaleRotate, Transpose, VerticalFlip, Resize)
 
-from math import pi
-from math import cos
-from math import floor
 from keras.callbacks import Callback
 
 from segmentation_models import Unet
 from keras.optimizers import SGD
-from segmentation_models.losses import jaccard_loss,dice_loss
+from segmentation_models.losses import jaccard_loss
 from segmentation_models.metrics import iou_score,f1_score
-from keras import backend as K
 from keras import backend
 from tta_wrapper import tta_segmentation
-import re
 import helpers
 
 def run(num_model = 1):

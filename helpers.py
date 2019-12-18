@@ -6,21 +6,10 @@ from math import pi
 from math import cos
 from math import floor
 from skimage.io import imread
-import albumentations as albu
+
 from albumentations import Resize
 
-from albumentations import (Blur, Compose, HorizontalFlip, HueSaturationValue,
-                            IAAEmboss, IAASharpen, JpegCompression, OneOf,
-                            RandomBrightness, RandomBrightnessContrast,
-                            RandomContrast, RandomCrop, RandomGamma,
-                            RandomRotate90, RGBShift, ShiftScaleRotate,
-                            Transpose, VerticalFlip, ElasticTransform, GridDistortion, OpticalDistortion)
-
 from segmentation_models import Unet
-from keras.optimizers import SGD
-from segmentation_models.losses import jaccard_loss,dice_loss
-from segmentation_models.metrics import iou_score,f1_score
-from keras import backend as K
 from keras import backend
 import matplotlib.image as mpimg
 import re
