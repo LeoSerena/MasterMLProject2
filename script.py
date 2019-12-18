@@ -1,7 +1,6 @@
 import os
 from PIL import Image
 import keras
-import tensorflow.python.platform
 import tensorflow as tf
 
 from sklearn.utils import shuffle
@@ -40,6 +39,7 @@ def run(num_model = 1):
         IMG_SIZE = 384
         N_EPOCHS = 300
         root_dir = 'training_augmented/'
+
     else:
         print("wrong index")
 

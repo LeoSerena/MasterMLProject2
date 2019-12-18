@@ -1,5 +1,8 @@
 from keras.utils import Sequence
+from sklearn.utils import shuffle
+
 from keras.callbacks import Callback
+
 import numpy as np
 import os
 from math import pi
