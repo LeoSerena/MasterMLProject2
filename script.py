@@ -155,7 +155,6 @@ def run(num_model = 1):
             image_idx = i-1,
             generator = test_generator
         )
-        print('we are, Nudra92, at image {}'.format(i))
         Image.fromarray(pimg).save(prediction_dir + "prediction_{}.png".format(i))
 
 
@@ -178,7 +177,7 @@ def run(num_model = 1):
         submission_filename = "pred_model_{}.csv".format(num_model)
         image_filenames = []
         for i in range(1, 51):
-            image_filename = "test_pred/prediction_{}.png".format(i)
+            image_filename = "test_pred{}/prediction_{}.png".format(num_model, i)
             image_filenames.append(image_filename)
         helpers.masks_to_submission(submission_filename, *image_filenames, pred = True)
         print("model {} predictions created at -{}-".format(num_model, submission_filename))
