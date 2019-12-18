@@ -80,7 +80,7 @@ For cyclical learning rates, we used the implementation from https://machinelear
 Summary
 -------
 The aim of this project is to detect roads on a dataset of satellite images. The competition metric is the f1 score, and we achieve a score of 0.922, which is tied for first place as of this writing.
-We use a U-net, a segmentation specific neural network (implementation from from the [Segmentation_models](https://github.com/qubvel/segmentation_models) package and improved our results with various techniques, including: 
+We use a U-net, a segmentation specific neural network (implementation from from the [Segmentation_models](https://github.com/qubvel/segmentation_models) package) and improved our results with various techniques, including: 
 
  - Selecting the backbone
  - Selecting the loss function
