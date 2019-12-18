@@ -1,6 +1,7 @@
 import script
 import helpers
 import pandas as pd
+import numpy as np
 
 if __name__ == '__main__':
     """
@@ -12,10 +13,15 @@ if __name__ == '__main__':
     script.run(num_model = 2)
 
     preds1 = pd.read_csv('pred_model_1.csv')
+    print('first model predictions terminated \n starting second model triaining')
     preds2 = pd.read_csv('pred_model_2.csv')
+    print('second model predictions terminated \n combining predictions...')
 
-    preds = (preds1 + preds2) / 2
+    preds = (preds1['prediction'] + preds2['prediction']) / 2
+    del preds1['prediction']
 
-    lambda_ = lambda x : 1 if x > helpers.foreground_threshold else 0
-    preds['prediction'] = preds['prediction'].map(lambda_)
-    preds.to_csv()
+    preds1['prediction'] = np.where(preds > helpers.foreground_threshold, 1, 0)
+
+    file_name = 'result.csv'
+    preds1.to_csv(file_name, index = False)
+    print("""predictions generated in -{}- file""".format(file_name))

@@ -17,6 +17,9 @@ from keras import backend
 import matplotlib.image as mpimg
 import re
 
+os.environ['PYTHONHASHSEED'] = '0'
+np.random.seed(1)
+
 class DataGeneratorFolder(Sequence):
     """
     Class generating samples and corresponding masks

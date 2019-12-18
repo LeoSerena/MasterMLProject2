@@ -21,6 +21,9 @@ from keras import backend
 from tta_wrapper import tta_segmentation
 import helpers
 
+tf.set_random_seed(1)
+
+
 def run(num_model = 1):
     ## Setting up DataGenerators for training and validation set
     if num_model == 1:
