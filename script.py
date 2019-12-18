@@ -155,6 +155,7 @@ def run(num_model = 1):
             image_idx = i-1,
             generator = test_generator
         )
+        print('we are, Nudra92, at image {}'.format(i))
         Image.fromarray(pimg).save(prediction_dir + "prediction_{}.png".format(i))
 
 
