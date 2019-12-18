@@ -18,7 +18,7 @@ The folder contains the folowing files:
 
 Installation
 ------------
-To install the dependencies first install [anaconda](https://www.anaconda.com/distribution/) and be sure to have pip on your computer
+To install the dependencies first install [anaconda](https://www.anaconda.com/distribution/) and be sure to have pip on your computer as well as python 3.7.
 
 Create a new environment with the conda console and activate it:
 
