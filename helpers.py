@@ -9,7 +9,7 @@ from math import pi
 from math import cos
 from math import floor
 from skimage.io import imread
-
+import random
 from albumentations import Resize
 
 from segmentation_models import Unet
@@ -19,6 +19,7 @@ import re
 
 os.environ['PYTHONHASHSEED'] = '0'
 np.random.seed(1)
+random.seed(1)
 
 class DataGeneratorFolder(Sequence):
     """
