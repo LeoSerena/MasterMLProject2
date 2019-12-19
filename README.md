@@ -12,9 +12,9 @@ This project was part of a challenge from EPFL course : Machine Learning CS-433 
 Content
 -------
 The folder contains the folowing files:
- - a script.py file containing the code implementing 2 different models
- - a helpers.py file containing the code of the helper functions for script.py
- - a run.py calling the scripts of the 3 models, performing the mean of the predictions and generating the final .csv
+ - a *script.py* file containing the code implementing 2 different models
+ - a *helpers.py* file containing the code of the helper functions for script.py
+ - a *run.py* calling the scripts of the 3 models, performing the mean of the predictions and generating the final .csv
 
 Installation
 ------------
@@ -42,11 +42,11 @@ Usage
 After installing all the dependencies, got to [AIcrowd](https://www.aicrowd.com/challenges/epfl-ml-road-segmentation-2019/dataset_files)
 to download the dataset.
 
-Transfer the *training* and *test_set_images* folders into the same folder as the script.py
+Transfer the *training* and *test_set_images* folders into the same folder as the *script.py*
 
 Then go to the [additionnal dataset link](https://www.cs.toronto.edu/~vmnih/data/) and download the training set
 
-Then, create a new folder in the same folder as the run.py file and name it *training_augmented*. In the folder, deposit the basic training and masks images in two folders named *images* and *groundtruth* and put the newly downloaded data as well.
+Then, create a new folder in the same folder as the *run.py* file and name it *training_augmented*. In the folder, deposit the basic training and masks images in two folders named *images* and *groundtruth* and put the newly downloaded data as well.
 
 Your tree should look like this:
 
@@ -73,13 +73,13 @@ Then run:
 ```
 $ python run.py
 ```
-This will run the training of the two models as well as merging the predictions, returning a csv named 'result.csv'.
+This will run the training of the two models as well as merging the predictions, returning a csv named *result.csv*.
 
 
 #### Memory errors
-If -memory errors- occur, instead of running the two models with one command from the run.py file, please follow the next instructions:
+If memory errors occur, instead of running the two models with one command from the run.py file, please follow the next instructions:
 
-First of all, make sure to have the same configuration up to the point of running python run.py
+First of all, make sure to have the same configuration up to the point of running ($ python run.py).
 
 Then, perform:
 ```
@@ -95,7 +95,7 @@ Finally, run
 ```
 python run merge
 ```
-This will merge the two created predctions and merge them, creating the result.csv file
+This will merge the two created predctions and merge them, creating the *result.csv* file
 
 Ressources
 ----------
