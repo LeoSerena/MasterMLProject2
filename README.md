@@ -71,6 +71,27 @@ Then run:
 ```
 $ python run.py
 ```
+This will run the training of the two models as well as merging the predictions, returning a csv named 'result.csv'.
+
+If -memory errors- occur, instead of running the two models with one command from the run.py file, please follow the next instructions:
+
+First of all, make sure to have the same configuration up to the point of running python run.py
+
+Then, perform:
+```
+python script.py 1
+```
+This will generate a .csv file with the predictions for the first model. Then run
+```
+python script.py 2
+```
+It will do the same for the second model.
+
+Finally, run
+```
+python run merge
+```
+This will merge the two created predctions and merge them, creating the result.csv file
 
 Ressources
 ----------
