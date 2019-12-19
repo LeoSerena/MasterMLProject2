@@ -100,7 +100,7 @@ Finally, run
 ```
 $ python run merge
 ```
-This will merge the two created predctions and merge them, creating the *result.csv* file
+This will take the two created predctions and merge them, creating the *result.csv* file
 
 Ressources
 ----------
