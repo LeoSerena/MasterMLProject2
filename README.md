@@ -72,6 +72,8 @@ Your tree should look like this:
 ```
 
 #### Running
+All further bash commands should be used in the anaconda console, in the new conda environment *my environment name*:
+
 Then run:
 ```
 $ python run.py
