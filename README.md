@@ -43,7 +43,7 @@ Usage
 After installing all the dependencies, got to [AIcrowd](https://www.aicrowd.com/challenges/epfl-ml-road-segmentation-2019/dataset_files)
 to download the dataset.
 
-Transfer the *test_set_images* (satellite images for prediction for AIcrowd), *training* (satellite images fr training) and *test_set_images* (corresponding masks of the satellite images for training) folders into the same folder as the *script.py*
+Transfer the *test_set_images* (satellite images for prediction for AIcrowd), *training* (satellite images for training) and *test_set_images* (corresponding masks of the satellite images for training) folders into the same folder as the *script.py*
 
 Then go to the [additionnal dataset link](https://www.cs.toronto.edu/~vmnih/data/) and download the training set
 
