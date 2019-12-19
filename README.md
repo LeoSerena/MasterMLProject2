@@ -47,7 +47,7 @@ Transfer the *test_set_images*, *training* and *test_set_images* folders into th
 
 Then go to the [additionnal dataset link](https://www.cs.toronto.edu/~vmnih/data/) and download the training set
 
-Then, create a new folder in the same folder as the *run.py* file and name it *training_augmented*. In the folder, deposit the basic training and masks images in two folders named *images* and *groundtruth* and the 100 first elements of the newly downloaded data as well.
+Then, create a new folder in the same folder as the *run.py* file and name it *training_augmented*. In the folder, deposit the basic training and masks images in two folders named *images* and *groundtruth* and the 100 first image and masks of the newly downloaded data as well.
 
 Your tree should look like this:
 
