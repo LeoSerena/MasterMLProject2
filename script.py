@@ -150,12 +150,14 @@ def run(num_model = 1):
     if not os.path.isdir(prediction_dir):
         os.mkdir(prediction_dir)
     for i in range(1, TEST_SIZE + 1):
+        # go fetch the test_images
         pimg = helpers.get_prediction_from_ensemble(
             models,
             '{}{}/test_{}.png'.format(test_dir, i, i),
             image_idx = i-1,
             generator = test_generator
         )
+        # saves the predictions in ./test_pred*num_model*/prediction_*num_prediction*.png
         Image.fromarray(pimg).save(prediction_dir + "prediction_{}.png".format(i))
 
     del model

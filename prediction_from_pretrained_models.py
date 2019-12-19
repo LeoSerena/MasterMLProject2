@@ -59,9 +59,7 @@ if __name__ == '__main':
     predict_model(2)
 
     preds1 = pd.read_csv('pred_model_1.csv')
-    print('first model predictions terminated \n starting second model triaining')
     preds2 = pd.read_csv('pred_model_2.csv')
-    print('second model predictions terminated \n combining predictions...')
 
     preds = (preds1['prediction'] + preds2['prediction']) / 2
     del preds1['prediction']
