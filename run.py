@@ -2,6 +2,7 @@ import script
 import helpers
 import pandas as pd
 import numpy as np
+import gc
 
 if __name__ == '__main__':
     """
@@ -10,6 +11,7 @@ if __name__ == '__main__':
     """
 
     script.run(num_model = 1)
+    gc.collect()
     script.run(num_model = 2)
 
     preds1 = pd.read_csv('pred_model_1.csv')
