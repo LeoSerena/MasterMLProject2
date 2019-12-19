@@ -68,7 +68,7 @@ Your tree should look like this:
 |    |   groundtruth
 |    |    |    *base masks and additionnal dataset masks
 +-- test_set_images
-|    *test images*
+|        *test images*
 ```
 
 #### Running
