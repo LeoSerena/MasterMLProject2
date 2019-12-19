@@ -2,3 +2,7 @@
 /training
 /test_set_images
 *.h5
+*.csv
+test.py
+test_pred1/
+test_pred2/
