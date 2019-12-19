@@ -210,7 +210,7 @@ class CosineAnnealingLearningRateSchedule(Callback):
 PIXEL_DEPTH = 255
 
 # load models from file
-def load_all_models(n_models, model_name = 'efficientnetb7'):
+def load_all_models(n_models, model_name = 'efficientnetb7', model_number = None):
     """
     Loads all parameters of all models and instantiace them
 
@@ -220,7 +220,9 @@ def load_all_models(n_models, model_name = 'efficientnetb7'):
         number of models to load
     model_name : String
         name of the backbone model
-
+    model_number : int
+        the model number for pretrained configuration
+        
     Returns
     -------
     List
@@ -228,7 +230,10 @@ def load_all_models(n_models, model_name = 'efficientnetb7'):
     """
     all_models = list()
     for i in range(n_models):
-        filename = 'snapshot_model_' + str(i + 1) + '.h5'
+        if model_number == None:
+            filename = 'snapshot_model_{}.h5'.format(i+1)
+        else:
+            filename = 'snapshot_model_{}.{}'.format(model_number, i+1)
         model = Unet(backbone_name = model_name, encoder_weights='imagenet', encoder_freeze = False)
         model.load_weights(filename)
         all_models.append(model)

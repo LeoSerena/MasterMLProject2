@@ -20,6 +20,7 @@ from segmentation_models.metrics import iou_score,f1_score
 from keras import backend
 from tta_wrapper import tta_segmentation
 import helpers
+import gc
 
 tf.set_random_seed(1)
 
@@ -157,6 +158,9 @@ def run(num_model = 1):
         )
         Image.fromarray(pimg).save(prediction_dir + "prediction_{}.png".format(i))
 
+    del model
+    del models
+    gc.collect()
 
 
     if __name__ == '__main__':
