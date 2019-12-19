@@ -41,13 +41,12 @@ def run(num_model):
             - dataset of 100 original images
         Second model:
             - batch size of 2
-            - crop size of 384 (to work wuth Unet)
+            - image size of 384 (to work with Unet)
             - 300 epochs
             - dataset of 100 original images plus 100 supplementary images
     """
     ## Setting up DataGenerators for training and validation set
     if num_model == 1:
-        # number of images per gradient step
         BATCH_SIZE = 20
         # crop dimension for data augmentation
         CROP_DIM = 128
@@ -57,7 +56,6 @@ def run(num_model):
 
     elif num_model == 2:
         BATCH_SIZE = 2
-        # number of images per gradient step
         CROP_DIM = 384
         IMG_SIZE = 384
         N_EPOCHS = 300
@@ -78,7 +76,7 @@ def run(num_model):
         CROP_DIM :int
             Dimensions of the image after being cropped
         IMG_SIZE :int
-            Dimensions of the image
+            Dimensions of the returned image
 
         Returns
         -------
