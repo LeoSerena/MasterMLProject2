@@ -45,7 +45,7 @@ to download the dataset.
 
 Transfer the *test_set_images* (satellite images for prediction for AIcrowd), *training* (satellite images for training) and *test_set_images* (corresponding masks of the satellite images for training) folders into the same folder as the *script.py*
 
-Then go to the [additionnal dataset link](https://www.cs.toronto.edu/~vmnih/data/) and download the training set
+Then go to the [additionnal dataset link](https://www.kaggle.com/insaff/massachusetts-roads-dataset) and download the training set
 
 Then, create a new folder in the same folder as the *run.py* file and name it *training_augmented*. In the folder, deposit the basic training and masks images in two folders named *images* and *groundtruth* and the 100 first image and masks of the newly downloaded data as well.
 
