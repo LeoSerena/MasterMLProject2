@@ -101,7 +101,7 @@ This will merge the two created predctions and merge them, creating the *result.
 Ressources
 ----------
 Part of the code was inspired by this [github repository](https://github.com/Diyago/ML-DL-scripts/blob/master/DEEP%20LEARNING/segmentation/Segmentation%20pipeline/segmentation%20pipeline.ipynb) from *Инсаф Ашрапов*, especially the DataGenerator and the Albumentations package usage.
-For cyclical learning rates, we used the implementation from this [code])https://machinelearningmastery.com/snapshot-ensemble-deep-learning-neural-network/) from *Jason Brownlee*.
+For cyclical learning rates, we used the implementation from this [code](https://machinelearningmastery.com/snapshot-ensemble-deep-learning-neural-network/) from *Jason Brownlee*.
 
 Summary
 -------
