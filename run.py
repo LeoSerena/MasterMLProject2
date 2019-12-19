@@ -15,7 +15,7 @@ if __name__ == '__main__':
         "this is called when we run ($ python run.py) on the anaconda console"
         print("performing training and predictions for models 1 and 2")
         script.run(num_model = 1)
-        print('first model predictions terminated \n starting second model triaining')
+        print('first model predictions terminated \n starting second model training')
         # trying to reduce memory usage for second model
         gc.collect()
         script.run(num_model = 2)
