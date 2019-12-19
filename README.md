@@ -15,7 +15,7 @@ The folder contains the folowing files:
  - a *script.py* file containing the code implementing 2 different models
  - a *helpers.py* file containing the code of the helper functions for *script.py*
  - a *run.py* calling the scripts of the 2 models, performing the mean of the predictions and generating the final .csv
- - a *repport.pdf* file containing the pdf of the repport 
+ - a *report.pdf* file containing the pdf of the report 
 
 Installation
 ------------
