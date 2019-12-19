@@ -26,7 +26,25 @@ import gc
 tf.set_random_seed(1)
 
 
-def run(num_model = 1):
+def run(num_model):
+    """
+    This function trains a model and saves the predictions of the test set in a .csv file
+
+    Parameters
+    ----------
+    num_model : int
+        possible values: 1, 2. The model number.
+        First model:
+            - batch size of 20
+            - crop size of 128
+            - 2400 epochs
+            - dataset of 100 original images
+        Second model:
+            - batch size of 2
+            - crop size of 384 (to work wuth Unet)
+            - 300 epochs
+            - dataset of 100 original images plus 100 supplementary images
+    """
     ## Setting up DataGenerators for training and validation set
     if num_model == 1:
         # number of images per gradient step
@@ -61,6 +79,7 @@ def run(num_model = 1):
             Dimensions of the image after being cropped
         IMG_SIZE :int
             Dimensions of the image
+
         Returns
         -------
             The image with composed transformations
@@ -151,7 +170,7 @@ def run(num_model = 1):
     if not os.path.isdir(prediction_dir):
         os.mkdir(prediction_dir)
     for i in range(1, TEST_SIZE + 1):
-        # go fetch the test_images
+        # fetches the test_images
         pimg = helpers.get_prediction_from_ensemble(
             models,
             '{}{}/test_{}.png'.format(test_dir, i, i),

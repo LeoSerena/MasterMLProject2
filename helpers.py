@@ -23,7 +23,10 @@ random.seed(1)
 
 class DataGeneratorFolder(Sequence):
     """
-    Class generating samples and corresponding masks
+    Class generating samples and corresponding masks. 
+    
+    Credit goes to -Инсаф Ашрапов-, 
+    https://github.com/Diyago/ML-DL-scripts/blob/master/DEEP%20LEARNING/segmentation/Segmentation%20pipeline/segmentation%20pipeline.ipynb
 
     Parameters
     ----------
@@ -127,6 +130,9 @@ class DataGeneratorFolder(Sequence):
 class CosineAnnealingLearningRateSchedule(Callback):
     """
     Class of the cyclic learning rate, inherited from callbaks
+
+    Credit goes to -Jason Brownlee -,
+    https://machinelearningmastery.com/snapshot-ensemble-deep-learning-neural-network/
 
     Parameters
     ----------
