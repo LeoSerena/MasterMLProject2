@@ -206,11 +206,8 @@ class CosineAnnealingLearningRateSchedule(Callback):
         # check if we can save model
         epochs_per_cycle = floor(self.epochs / self.cycles)
         if epoch != 0 and (epoch + 1) % epochs_per_cycle == 0:
-            # save model to file
             filename = "snapshot_model_%d.h5" % int((epoch + 1) / epochs_per_cycle)
-#             self.model.save(filename)
             self.model.save_weights(filename)
-#             self.model.save_weights('model_weights.h5')
             print('>saved snapshot %s, epoch %d' % (filename, epoch))
 
 PIXEL_DEPTH = 255
@@ -311,7 +308,6 @@ foreground_threshold = 0.28 # percentage of pixels > 1 required to assign a fore
 # assign a label to a patch
 def patch_to_label(patch):
     df = np.mean(patch)
-#     return df
     if df > foreground_threshold:
         return 1
     else:
