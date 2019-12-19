@@ -7,7 +7,7 @@
 
 Description
 -----------
-This project was part of a challenge from EPFL course : Machine Learning CS-433 and was hosted on the platform [AIcrowd](https://www.aicrowd.com/). The objective was, given satellite images and corresponding masks, to recognize where road are on a satellite image.
+This project was part of a challenge from EPFL course : Machine Learning CS-433 and was hosted on the platform [AIcrowd](https://www.aicrowd.com/). The objective was, given satellite images and corresponding masks, to recognize where road are on a set of satellite images.
 
 Content
 -------
