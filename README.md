@@ -13,7 +13,7 @@ Content
 -------
 The folder contains the folowing files:
  - a *script.py* file containing the code implementing 2 different models
- - a *helpers.py* file containing the code of the helper functions for script.py
+ - a *helpers.py* file containing the code of the helper functions for *script.py*
  - a *run.py* calling the scripts of the 3 models, performing the mean of the predictions and generating the final .csv
 
 Installation
