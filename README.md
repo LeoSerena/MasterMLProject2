@@ -38,6 +38,7 @@ $ pip install sklearn albumentations segmentation_models tta_wrapper pillow
 
 Usage
 -----
+#### Data setup
 After installing all the dependencies, got to [AIcrowd](https://www.aicrowd.com/challenges/epfl-ml-road-segmentation-2019/dataset_files)
 to download the dataset.
 
@@ -67,12 +68,15 @@ Your tree should look like this:
 |    |    |    *base masks and additionnal dataset masks
 ```
 
+#### Running
 Then run:
 ```
 $ python run.py
 ```
 This will run the training of the two models as well as merging the predictions, returning a csv named 'result.csv'.
 
+
+#### Memory errors
 If -memory errors- occur, instead of running the two models with one command from the run.py file, please follow the next instructions:
 
 First of all, make sure to have the same configuration up to the point of running python run.py
