@@ -43,11 +43,11 @@ Usage
 After installing all the dependencies, got to [AIcrowd](https://www.aicrowd.com/challenges/epfl-ml-road-segmentation-2019/dataset_files)
 to download the dataset.
 
-Transfer the *training* and *test_set_images* folders into the same folder as the *script.py*
+Transfer the *test_set_images*, *training* and *test_set_images* folders into the same folder as the *script.py*
 
 Then go to the [additionnal dataset link](https://www.cs.toronto.edu/~vmnih/data/) and download the training set
 
-Then, create a new folder in the same folder as the *run.py* file and name it *training_augmented*. In the folder, deposit the basic training and masks images in two folders named *images* and *groundtruth* and put the newly downloaded data as well.
+Then, create a new folder in the same folder as the *run.py* file and name it *training_augmented*. In the folder, deposit the basic training and masks images in two folders named *images* and *groundtruth* and the 100 first elements of the newly downloaded data as well.
 
 Your tree should look like this:
 
@@ -67,6 +67,8 @@ Your tree should look like this:
 |    |    |    *base satellite images and additionnal dataset images
 |    |   groundtruth
 |    |    |    *base masks and additionnal dataset masks
++-- test_set_images
+|    *test images*
 ```
 
 #### Running
@@ -105,7 +107,7 @@ For cyclical learning rates, we used the implementation from this [code](https:/
 
 Summary
 -------
-The aim of this project is to detect roads on a dataset of satellite images. The competition metric is the f1 score, and we achieve a score of 0.922, which is tied for first place as of this writing.
+The aim of this project is to detect roads on a dataset of satellite images. The competition metric is the f1 score, and we achieve a public score of 0.922, which is tied for first place as of this writing.
 We use a U-net, a segmentation specific neural network (implementation from from the [Segmentation_models](https://github.com/qubvel/segmentation_models) package) and improved our results with various techniques, including: 
 
  - Selecting the backbone
