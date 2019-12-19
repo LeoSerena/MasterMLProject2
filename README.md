@@ -15,7 +15,7 @@ The folder contains the folowing files:
  - a *script.py* file containing the code implementing 2 different models
  - a *helpers.py* file containing the code of the helper functions for *script.py*
  - a *run.py* calling the scripts of the 2 models, performing the mean of the predictions and generating the final .csv
- - a *report.pdf* file containing the pdf of the report 
+ - a *report.pdf* file containing the pdf of the report
 
 Installation
 ------------
@@ -101,6 +101,9 @@ Finally, run
 $ python run merge
 ```
 This will take the two created predctions and merge them, creating the *result.csv* file
+
+#### Disclaimer
+As GPU computation and Adam optimization are hard to seed, we could't deterministically produce our predictions. If nevertheless someone wants the weights of the models that gave the predictions and predict himself, please send an email to Nicolas Brandt. A file producing the resluts from the weights is also available on demand.
 
 Ressources
 ----------
