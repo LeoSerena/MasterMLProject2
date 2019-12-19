@@ -103,7 +103,7 @@ $ python run merge
 This will take the two created predctions and merge them, creating the *result.csv* file
 
 #### Disclaimer
-As GPU computation and Adam optimization are hard to seed, we could't deterministically produce our predictions. If nevertheless someone wants the weights of the models that gave the predictions and predict himself, please send an email to Nicolas Brandt. A file producing the resluts from the weights is also available on demand.
+As GPU computation and Adam optimization are hard to seed, we could't deterministically produce our predictions. If nevertheless someone wants the weights of the models that gave the predictions and predict himself, please send an email to Nicolas Brandt. A file producing the results from the weights is also available on demand.
 
 Ressources
 ----------
