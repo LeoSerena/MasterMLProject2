@@ -74,11 +74,11 @@ Your tree should look like this:
 #### Running
 All further bash commands should be used in the anaconda console, in the new conda environment *my environment name*:
 
-To generate the results, run:
+Now run:
 ```
 $ python run.py
 ```
-This will run the training of the two models as well as merging the predictions, returning a csv named *result.csv*.
+This will run the training of the two models as well as merging the predictions, returning a csv named *result.csv*. These are the results of the prediction from the images of the *test_set_images* folder.
 
 
 #### Memory errors
