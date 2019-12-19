@@ -316,7 +316,7 @@ def patch_to_pred(patch):
 
 def mask_to_submission_strings(image_filename, pred):
     """Reads a single image and outputs the strings that should go into the submission file"""
-    img_number = int(re.findall(r"\d+", image_filename)[-1])
+    img_number = int(re.findall(r"\d+", image_filename)[-1])    
     im = mpimg.imread(image_filename)
     patch_size = 16
     for j in range(0, im.shape[1], patch_size):

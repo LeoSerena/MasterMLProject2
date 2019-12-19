@@ -1,4 +1,5 @@
 import os
+import sys
 from PIL import Image
 import keras
 import tensorflow as tf
@@ -165,25 +166,21 @@ def run(num_model = 1):
     gc.collect()
 
 
-    if __name__ == '__main__':
-        """
-        this function is called if we only want the prediction of the first model and creates the final .csv
-        """
-        run(num_model = 1)
-        submission_filename = "sub_test.csv"
-        image_filenames = []
-        for i in range(1, 51):
-            image_filename = "test_pred{}/prediction_{}.png".format(num_model, i)
-            image_filenames.append(image_filename)
-        helpers.masks_to_submission(submission_filename, *image_filenames)
-    else:
-        """
-        this is called when the file is called from the run.py
-        """
-        submission_filename = "pred_model_{}.csv".format(num_model)
-        image_filenames = []
-        for i in range(1, 51):
-            image_filename = "test_pred{}/prediction_{}.png".format(num_model, i)
-            image_filenames.append(image_filename)
-        helpers.masks_to_submission(submission_filename, *image_filenames, pred = True)
-        print("model {} predictions created at -{}-".format(num_model, submission_filename))
+    submission_filename = "pred_model_{}.csv".format(num_model)
+    image_filenames = []
+    for i in range(1, 51):
+        image_filename = "test_pred{}/prediction_{}.png".format(num_model, i)
+        image_filenames.append(image_filename)
+    helpers.masks_to_submission(submission_filename, *image_filenames, pred = True)
+    print("model {} predictions created at -{}-".format(num_model, submission_filename))
+
+
+if __name__ == '__main__':
+    if not len(sys.argv) == 2:  
+        print('wrong arguments')
+        sys.exit(0)
+    num_model = int(sys.argv[1])
+    if not (num_model == 1 or num_model == 2):
+        print('error, model number must be 1 or 2')
+        sys.exit(0)
+    run(num_model = num_model)

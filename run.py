@@ -2,20 +2,30 @@ import script
 import helpers
 import pandas as pd
 import numpy as np
+import sys
 import gc
+
 
 if __name__ == '__main__':
     """
     main function, it runs the 3 scripts files,each corresponding to a model,
     and then does the mean of the predictions
     """
+    if len(sys.argv) == 1:
+        print("performing training and predictions for models 1 and 2")
+        script.run(num_model = 1)
+        print('first model predictions terminated \n starting second model triaining')
+        gc.collect()
+        script.run(num_model = 2)
+        print('second model predictions terminated \n combining predictions...')
 
-    script.run(num_model = 1)
-    print('first model predictions terminated \n starting second model triaining')
-    gc.collect()
-    script.run(num_model = 2)
-    print('second model predictions terminated \n combining predictions...')
-
+    elif len(sys.argv) == 2:
+        if sys.argv[1] == 'merge':
+            print("merging predictions")
+        else:
+            print("invalid argument")
+            sys.exit(0)
+        
     preds1 = pd.read_csv('pred_model_1.csv')
     preds2 = pd.read_csv('pred_model_2.csv')
 
