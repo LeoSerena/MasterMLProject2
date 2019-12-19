@@ -84,17 +84,17 @@ First of all, make sure to have the same configuration up to the point of runnin
 
 Then, perform:
 ```
-python script.py 1
+$ python script.py 1
 ```
 This will generate a .csv file with the predictions for the first model. Then run
 ```
-python script.py 2
+$ python script.py 2
 ```
 It will do the same for the second model.
 
 Finally, run
 ```
-python run merge
+$ python run merge
 ```
 This will merge the two created predctions and merge them, creating the *result.csv* file
 
