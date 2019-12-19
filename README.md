@@ -7,7 +7,7 @@
 
 Description
 -----------
-This project was part of a challenge from EPFL course : Machine Learning CS-433 and was hosted on the platform [AIcrowd](https://www.aicrowd.com/).
+This project was part of a challenge from EPFL course : Machine Learning CS-433 and was hosted on the platform [AIcrowd](https://www.aicrowd.com/). The objective was, given satellite images and corresponding masks, to recognize where road are on a satellite image.
 
 Content
 -------
@@ -43,7 +43,7 @@ Usage
 After installing all the dependencies, got to [AIcrowd](https://www.aicrowd.com/challenges/epfl-ml-road-segmentation-2019/dataset_files)
 to download the dataset.
 
-Transfer the *test_set_images*, *training* and *test_set_images* folders into the same folder as the *script.py*
+Transfer the *test_set_images* (satellite images for prediction for AIcrowd), *training* (satellite images fr training) and *test_set_images* (corresponding masks of the satellite images for training) folders into the same folder as the *script.py*
 
 Then go to the [additionnal dataset link](https://www.cs.toronto.edu/~vmnih/data/) and download the training set
 
